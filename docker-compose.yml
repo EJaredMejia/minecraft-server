@@ -1,0 +1,22 @@
+services:
+  minecraft:
+    image: itzg/minecraft-server
+    volumes:
+      - minecraftdata:/data
+      - ./minecraft/plugins:/plugins
+    ports:
+      - 25565:25565
+    environment:
+      EULA: "TRUE"
+      TYPE: "PAPER"
+      VERSION: "1.21.1"
+      OPS: "jimmy"
+      #? let anyone on the server with the ip??
+      # ENABLE_WHITELIST: "TRUE"
+      # ENFORCE_WHITELIST: "TRUE"
+    tty: TRUE
+    stdin_open: TRUE
+    restart: unless-stopped
+volumes:
+  minecraftdata:
+    external: true
