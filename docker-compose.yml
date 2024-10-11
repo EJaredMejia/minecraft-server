@@ -11,6 +11,7 @@ services:
       TYPE: "PAPER"
       VERSION: "1.21.1"
       OPS: "jimmy"
+      MEMORY: 750MB
       #? let anyone on the server with the ip??
       # ENABLE_WHITELIST: "TRUE"
       # ENFORCE_WHITELIST: "TRUE"
